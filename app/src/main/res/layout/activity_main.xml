@@ -7,4 +7,25 @@
     tools:context=".MainActivity"
     android:background="@drawable/image1_v1">
 
+    <ImageView
+        android:id="@+id/image_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:src="@drawable/top_title_ma1_gradiant"/>
+
+    <ImageView
+        android:id="@+id/image_2"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:src="@drawable/bot_title_ma1_gradiant"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
