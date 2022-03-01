@@ -4,6 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".MainActivity2"
+    android:background="@drawable/full_background_ma2">
+
+    <ImageView
+        android:id="@+id/image_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:src="@drawable/geel"/>
+    
+    <TextView
+        android:id="@+id/text_1"
+
+        android:layout_width="50dp"
+        android:layout_height="350dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:text="&lt;"
+        android:textColor="@color/c10"
+        android:gravity="center"
+        android:textSize="48dp"
+
+        android:background="@drawable/button_background_yellow"/>
+
+    <TextView
+        android:id="@+id/text_2"
+
+        android:layout_width="50dp"
+        android:layout_height="350dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:text="&gt;"
+        android:textColor="@color/c10"
+        android:gravity="center"
+        android:textSize="48dp"
+
+        android:background="@drawable/button_background_yellow"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

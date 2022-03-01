@@ -4,8 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/bot_title_ma1_gradiant.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_bollen.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_green.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_wit.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_yellow.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/full_background_ma2.xml" value="0.236" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/ma2_draaischijf.xml" value="0.236" />
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/top_title_ma1_gradiant.xml" value="0.236" />
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/layout/activity_main2.xml" value="0.22" />
       </map>
     </option>
   </component>
