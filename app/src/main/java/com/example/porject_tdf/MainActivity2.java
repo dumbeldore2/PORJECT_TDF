@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity {
 
     //textvieuws initen
-    TextView textView_1, textView_2;
+    TextView textView_1, textView_2,textView_3;
 
     //image view intien
     ImageView imageView_1;
@@ -34,6 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
         //textviews conecten
         textView_1 = findViewById(R.id.text_1);
         textView_2 = findViewById(R.id.text_2);
+        textView_3 = findViewById(R.id.text_3);
 
         //imageview conecten
         imageView_1 = findViewById(R.id.image_1);
@@ -52,6 +53,8 @@ public class MainActivity2 extends AppCompatActivity {
         textView_2.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_green));
         imageView_1.setImageResource(R.drawable.geel);
+        textView_3.setBackgroundColor(getResources().getColor(R.color.c6));
+        textView_3.setTextColor(getResources().getColor(R.color.c1));
     }
     public void setToGreen(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
@@ -59,6 +62,8 @@ public class MainActivity2 extends AppCompatActivity {
         textView_2.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_wit));
         imageView_1.setImageResource(R.drawable.groen);
+        textView_3.setBackgroundColor(getResources().getColor(R.color.c7));
+        textView_3.setTextColor(getResources().getColor(R.color.c1));
     }
     public void setToWit(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
@@ -66,6 +71,8 @@ public class MainActivity2 extends AppCompatActivity {
         textView_2.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_bollen));
         imageView_1.setImageResource(R.drawable.wit);
+        textView_3.setBackgroundColor(getResources().getColor(R.color.c9));
+        textView_3.setTextColor(getResources().getColor(R.color.c1));
     }
     public void setToBol(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
@@ -73,6 +80,8 @@ public class MainActivity2 extends AppCompatActivity {
         textView_2.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_yellow));
         imageView_1.setImageResource(R.drawable.bol);
+        textView_3.setBackgroundColor(getResources().getColor(R.color.c8));
+        textView_3.setTextColor(getResources().getColor(R.color.c10));
     }
 
     public void clickListners(){
