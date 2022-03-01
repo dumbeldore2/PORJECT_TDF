@@ -9,6 +9,9 @@ import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    //de int dat beslist hoelang deze pagina op blijft
+    private static int SPLASH_TIME_OUT = 4000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(getResources().getColor(R.color.c1));
 
         //de spash
-        /*
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -31,7 +33,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         },SPLASH_TIME_OUT);
-
-         */
     }
 }
