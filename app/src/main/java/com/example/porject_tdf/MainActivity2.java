@@ -120,7 +120,6 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
-
         textView_2.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 switch (c){
