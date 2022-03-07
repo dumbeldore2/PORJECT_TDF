@@ -32,7 +32,9 @@
 
             android:text="Klassementen"
             android:textSize="48dp"
-            android:textColor="@color/c10"/>
+            android:textColor="@color/c10"
+
+            android:background="@drawable/background_title_t1_ma3"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
