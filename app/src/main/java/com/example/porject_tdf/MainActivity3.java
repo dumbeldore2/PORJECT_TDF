@@ -4,8 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.ListView;
 
 public class MainActivity3 extends AppCompatActivity {
+
+
+    //alles met de listview en zijn adapter te maken
+    //de listview initen
+    ListView listView;
+
+    //test data
+    String a[] = {"Team 1","Team 2","Team 3","Team 4"};
+
+    //adapter initen
+    MainActivity3_bar mainActivity3_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,5 +29,14 @@ public class MainActivity3 extends AppCompatActivity {
         );
         getWindow().setNavigationBarColor(getResources().getColor(R.color.c1));
         getWindow().setStatusBarColor(getResources().getColor(R.color.c1));
+
+
+        //listview stuff
+        //listview initen
+        listView = findViewById(R.id.list_view_1);
+
+        //adapter conecten
+        mainActivity3_bar = new MainActivity3_bar(this,a);
+        listView.setAdapter(mainActivity3_bar);
     }
 }
