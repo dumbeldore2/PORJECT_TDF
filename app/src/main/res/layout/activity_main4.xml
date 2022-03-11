@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4"
+    android:background="@drawable/full_background_ma2">
+
+    <TextView
+        android:id="@+id/text_1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="account toevoegen. "
+        android:textColor="@color/c10"
+        android:textSize="35dp"
+
+        android:layout_margin="10dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_1"
+
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/text_2"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="naam?"
+            android:textSize="30dp"
+            android:textColor="@color/c10" />
+
+        <EditText
+            android:id="@+id/edit_1"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_2"
+
+            android:hint="Name here"
+            android:textColor="@color/c10"
+            android:textColorHint="@color/c10"
+            android:textSize="25dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_2"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_1"
+
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/text_3"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="email?"
+            android:textSize="30dp"
+            android:textColor="@color/c10" />
+
+        <EditText
+            android:id="@+id/edit_2"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_3"
+
+            android:hint="Email here"
+            android:textColor="@color/c10"
+            android:textColorHint="@color/c10"
+            android:textSize="25dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
