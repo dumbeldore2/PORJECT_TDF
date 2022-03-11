@@ -102,5 +102,47 @@
             android:textColor="@color/c10"
             android:textColorHint="@color/c10"
             android:textSize="25dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_3"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_2"
+
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/text_4"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="leeftijd?"
+            android:textSize="30dp"
+            android:textColor="@color/c10" />
+
+        <EditText
+            android:id="@+id/edit_3"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_4"
+
+            android:hint="Leeftijd here"
+            android:textColor="@color/c10"
+            android:textColorHint="@color/c10"
+            android:textSize="25dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
