@@ -62,7 +62,6 @@
             android:textColorHint="@color/c10"
             android:textSize="25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_2"
 
@@ -184,4 +183,65 @@
             android:textColorHint="@color/c10"
             android:textSize="25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_5"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraint_6"
+
+        android:layout_margin="1dp">
+
+        <TextView
+            android:id="@+id/text_6"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="add"
+            android:textColor="@color/c10"
+            android:textSize="36dp"
+            android:gravity="center"
+
+            android:background="@drawable/add_background"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_6"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="1dp">
+
+
+        <TextView
+            android:id="@+id/text_7"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="back"
+            android:textColor="@color/c10"
+            android:textSize="36dp"
+            android:gravity="center"
+
+            android:background="@drawable/back_background"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
