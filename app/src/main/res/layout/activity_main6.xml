@@ -7,4 +7,36 @@
     tools:context=".MainActivity6"
     android:background="@drawable/full_background_ma2">
 
+    <TextView
+        android:id="@+id/text_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="welcome"
+        android:textSize="36dp"
+        android:textColor="@color/c10"
+
+        android:gravity="center"
+
+        android:layout_marginTop="200dp"/>
+
+    <ImageView
+        android:id="@+id/image_1"
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:src="@drawable/ic_baseline_person_24"
+
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
