@@ -7,4 +7,78 @@
     tools:context=".MainActivity5"
     android:background="@drawable/full_background_ma2">
 
+    <TextView
+        android:id="@+id/text_1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:text="Inloggen"
+        android:textColor="@color/c10"
+        android:textSize="48dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_1"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:id="@+id/text_2"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:text="naam?"
+            android:textSize="30dp"
+            android:textColor="@color/c10" />
+
+        <EditText
+            android:id="@+id/edit_1"
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_2"
+
+            android:hint="Name here"
+            android:textColor="@color/c10"
+            android:textColorHint="@color/c10"
+            android:textSize="25dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_3"
+
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:text="check"
+        android:textColor="@color/c10"
+        android:textSize="36dp"
+        android:gravity="center"
+
+        android:layout_margin="5dp"
+
+        android:background="@drawable/add_background"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
