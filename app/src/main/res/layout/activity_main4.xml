@@ -235,7 +235,7 @@
             app:layout_constraintEnd_toEndOf="parent"
 
             android:text="back"
-            android:textColor="@color/c10"
+            android:textColor="@color/c1"
             android:textSize="36dp"
             android:gravity="center"
 

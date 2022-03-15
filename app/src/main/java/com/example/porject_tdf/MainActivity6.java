@@ -38,5 +38,13 @@ public class MainActivity6 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        image1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override public boolean onLongClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity4.class);
+                startActivity(intent);
+                return true;
+            }
+        });
     }
 }
