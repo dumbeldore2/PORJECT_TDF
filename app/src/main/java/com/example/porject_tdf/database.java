@@ -1,5 +1,6 @@
 package com.example.porject_tdf;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -28,7 +29,7 @@ public class database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + DATABASE_table_1 + "(" + Table_1_col_0 + " INTEGER DEFAULT 0 primary key ,"
                 + Table_1_col_1 + " TEXT default 'def'," + Table_1_col_2 + " TEXT default 'def'," + Table_1_col_3 +
-                " INTEGER default 0," + Table_1_col_4 + " TEXT default 'def')");
+                "  TEXT default 'def'," + Table_1_col_4 + " TEXT default 'def')");
     }
 
     @Override
@@ -55,5 +56,48 @@ public class database extends SQLiteOpenHelper {
             }
         }
         return uit;
+    }
+
+    public void addToTabel1(String s1,String s2,String s3,String s4) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_1_col_0, IDMAKER_TABLE_1());
+        contentValues.put(Table_1_col_1, s1);
+        contentValues.put(Table_1_col_2, s2);
+        contentValues.put(Table_1_col_3, s3);
+        contentValues.put(Table_1_col_4, s4);
+
+        sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
+    }
+
+    public String[] s1() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_1_col_1 + " from " + DATABASE_table_1 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
+    public String[] s2() {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_1_col_2 + " from " + DATABASE_table_1 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
     }
 }

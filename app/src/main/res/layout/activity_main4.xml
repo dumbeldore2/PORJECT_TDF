@@ -57,6 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_2"
 
+            android:inputType="text"
             android:hint="Name here"
             android:textColor="@color/c10"
             android:textColorHint="@color/c10"
@@ -97,6 +98,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_3"
 
+            android:inputType="textEmailAddress"
             android:hint="Email here"
             android:textColor="@color/c10"
             android:textColorHint="@color/c10"
@@ -138,6 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_4"
 
+            android:inputType="date"
             android:hint="Leeftijd here"
             android:textColor="@color/c10"
             android:textColorHint="@color/c10"
@@ -178,23 +181,23 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_5"
 
+            android:inputType="number"
             android:hint="gewicht here"
             android:textColor="@color/c10"
             android:textColorHint="@color/c10"
             android:textSize="25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_5"
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/constraint_6"
 
-        android:layout_margin="1dp">
+        android:layout_margin="5dp">
 
         <TextView
             android:id="@+id/text_6"
@@ -212,7 +215,6 @@
 
             android:background="@drawable/add_background"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_6"
 
@@ -222,7 +224,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="1dp">
+
+        android:layout_margin="5dp">
 
 
         <TextView
