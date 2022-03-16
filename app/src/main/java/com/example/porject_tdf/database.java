@@ -147,5 +147,4 @@ public class database extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(DATABASE_table_2, null, contentValues);
     }
-
 }
