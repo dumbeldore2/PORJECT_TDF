@@ -79,12 +79,16 @@ public class MainActivity4 extends AppCompatActivity {
                 System.out.println(get3bool());
                 System.out.println(get4bool());
                  */
-
+                /*
                 System.out.println(check1());
                 System.out.println(check2());
+                 */
 
                 if (get1bool() && get2bool() && get3bool() && get4bool() && !check1() && !check2()){
+
                     db.addToTabel1(get1(),get2(),get4(),get3());
+                    db.addToTabel2(get1(),"account created");
+                    db.addToTabel2(get1(),"loged in");
 
                     Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
                     startActivity(intent);

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.CpuUsageInfo;
 
 import androidx.annotation.Nullable;
 
@@ -113,6 +114,19 @@ public class database extends SQLiteOpenHelper {
         return uits;
     }
 
+    public int length_table_1(){
+        int uit = 0;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_1, null
+        );
+
+        uit = cursor.getCount();
+        return uit;
+    }
+
+
 
 
     //table 2
@@ -141,10 +155,38 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(Table_2_col_0, IDMAKER_TABLE_1());
+        contentValues.put(Table_2_col_0, IDMAKER_TABLE_2());
         contentValues.put(Table_2_col_1, s1);
         contentValues.put(Table_2_col_2, s2);
 
         sqLiteDatabase.insert(DATABASE_table_2, null, contentValues);
+    }
+
+    public int length_table_2(){
+        int uit = 0;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_2, null
+        );
+
+        uit = cursor.getCount();
+        return uit;
+    }
+
+    public String lastStatus(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_2_col_2 + " from " + DATABASE_table_2 + "", null);
+
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
+            }
+        }
+        return uit;
     }
 }

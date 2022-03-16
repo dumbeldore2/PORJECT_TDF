@@ -11,7 +11,10 @@ import android.widget.ImageView;
 public class MainActivity6 extends AppCompatActivity {
 
     //imageviews initen
-    ImageView image1;
+    ImageView image1,image2;
+
+    //databse initen
+    database db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +29,14 @@ public class MainActivity6 extends AppCompatActivity {
 
         //imageses conecten
         image1 = findViewById(R.id.image_1);
+        image2 = findViewById(R.id.image_2);
+
+        //db conecten
+        db = new database(this);
 
         //functies
         click_1();
+        logInListner();
     }
 
     public void click_1(){
@@ -46,5 +54,17 @@ public class MainActivity6 extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void logInListner(){
+        /*
+        System.out.println(db.lastStatus());
+         */
+
+        if (db.lastStatus().equals("loged in")){
+            image2.setImageResource(R.drawable.ic_baseline_check_circle_24);
+        } else {
+            image2.setImageResource(R.drawable.ic_baseline_clear_24);
+        }
     }
 }
