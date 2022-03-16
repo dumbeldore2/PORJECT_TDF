@@ -7,24 +7,6 @@
     tools:context=".MainActivity6"
     android:background="@drawable/full_background_ma2">
 
-    <TextView
-        android:id="@+id/text_1"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        android:text="welcome"
-        android:textSize="36dp"
-        android:textColor="@color/c10"
-
-        android:gravity="center"
-
-        android:layout_marginTop="200dp"/>
-
     <ImageView
         android:id="@+id/image_1"
 
@@ -38,6 +20,7 @@
 
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"/>
+
     <ImageView
         android:id="@+id/image_2"
 
@@ -51,5 +34,110 @@
 
         android:layout_marginLeft="35dp"
         android:layout_marginTop="35dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="welcome"
+                android:textSize="36dp"
+                android:textColor="@color/c10"
+
+                android:gravity="center"
+
+                android:layout_marginTop="50dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_1"
+
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/background_listview_item_ma_3">
+
+                <ImageView
+                    android:id="@+id/image_3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/geel"
+
+                    android:layout_margin="15dp"/>
+
+                <TextView
+                    android:id="@+id/text_2"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:text="Classements"
+                    android:textSize="36dp"
+                    android:textColor="@color/c10" android:background="@drawable/background_title_t1_ma3"
+
+                    android:layout_margin="5dp"
+                    android:padding="5dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_2"
+
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:background="@drawable/background_listview_item_ma_3">
+
+                <ImageView
+                    android:id="@+id/image_4"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/rainbow"
+
+                    android:layout_margin="15dp"/>
+
+                <TextView
+                    android:id="@+id/text_3"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:text="Een dags"
+                    android:textSize="36dp"
+                    android:textColor="@color/c10"
+                    android:background="@drawable/background_title_t1_ma3"
+
+                    android:layout_margin="5dp"
+                    android:padding="5dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
