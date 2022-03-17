@@ -15,6 +15,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     //test data
     String a[] = {"Team 1","Team 2","Team 3","Team 4"};
+    String b[] = {"yago,scott,aiko","yago,scott","phara,yago","merel,yago"};
 
     //adapter initen
     MainActivity3_bar mainActivity3_bar;
@@ -36,7 +37,7 @@ public class MainActivity3 extends AppCompatActivity {
         listView = findViewById(R.id.list_view_1);
 
         //adapter conecten
-        mainActivity3_bar = new MainActivity3_bar(this,a);
+        mainActivity3_bar = new MainActivity3_bar(this,a,b);
         listView.setAdapter(mainActivity3_bar);
     }
 }
