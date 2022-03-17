@@ -3,6 +3,7 @@ package com.example.porject_tdf;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -42,6 +43,10 @@ public class MainActivity3_bar extends ArrayAdapter<String> {
         textView2.setText(stringData[position]);
         textView3.setText(getNames(position));
 
+        System.out.println(position);
+
+        if (position == 4){
+        }
         return row;
     }
 

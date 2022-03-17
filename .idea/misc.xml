@@ -47,11 +47,13 @@
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main4.xml" value="0.375" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main5.xml" value="0.375" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main6.xml" value="0.35696579077838375" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main7.xml" value="0.375" />
         <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main_activity3_bar.xml" value="0.33" />
+        <entry key="..\:/Users/yagoe/Documents/AREA_51/DEPARTMENT_OF_ANDROID_STUDIO/PORJECT_TDF/app/src/main/res/layout/activity_main_activity3_bar_add.xml" value="0.375" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
