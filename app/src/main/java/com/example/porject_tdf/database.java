@@ -229,4 +229,15 @@ public class database extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(DATABASE_table_2, null, contentValues);
     }
+    public int length_table_3(){
+        int uit = 0;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_3, null
+        );
+
+        uit = cursor.getCount();
+        return uit;
+    }
 }
