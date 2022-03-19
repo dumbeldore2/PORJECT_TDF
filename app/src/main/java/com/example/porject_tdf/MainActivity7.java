@@ -64,7 +64,7 @@ public class MainActivity7 extends AppCompatActivity {
         });
     }
     public void click_2(){
-        text4.setOnClickListener(new View.OnClickListener() {
+        text7.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
                 startActivity(intent);
@@ -72,9 +72,9 @@ public class MainActivity7 extends AppCompatActivity {
         });
     }
     public void click_3(){
-        text4.setOnClickListener(new View.OnClickListener() {
+        text8.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
                 startActivity(intent);
             }
         });
