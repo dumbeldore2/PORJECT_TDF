@@ -197,6 +197,21 @@ public class database extends SQLiteOpenHelper {
         }
         return uit;
     }
+    public String lastName(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_2_col_1 + " from " + DATABASE_table_2 + "", null);
+
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
+            }
+        }
+        return uit;
+    }
 
     //table 3
     public int IDMAKER_TABLE_3(){

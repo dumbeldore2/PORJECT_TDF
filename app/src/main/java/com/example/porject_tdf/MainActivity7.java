@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity7 extends AppCompatActivity {
 
     //init edits
@@ -22,6 +24,9 @@ public class MainActivity7 extends AppCompatActivity {
 
     //textviews initen
     TextView text4,text7,text8;
+
+    //array
+    ArrayList<String> strings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,33 +54,44 @@ public class MainActivity7 extends AppCompatActivity {
         //errorstring conecten
         error = "";
 
+        //array conecten
+        strings = new ArrayList<>();
+
         //functions
         click_1();
         click_2();
         click_3();
+        addUser();
     }
 
     public void click_1(){
         text4.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
-                startActivity(intent);
+
+                if(get2bool()){
+                    strings.add(get1());
+                }
+
             }
         });
     }
     public void click_2(){
         text7.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
+
                 Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
                 startActivity(intent);
+
             }
         });
     }
     public void click_3(){
         text8.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
+
                 Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
                 startActivity(intent);
+
             }
         });
     }
@@ -110,5 +126,11 @@ public class MainActivity7 extends AppCompatActivity {
             error = "de email moet ingevuld zijn";
         }
         return b;
+    }
+
+    public void addUser(){
+        if(db.lastStatus().equals("loged in")){
+            strings.add(db.lastName());
+        }
     }
 }
