@@ -122,7 +122,7 @@ public class MainActivity5 extends AppCompatActivity {
     public boolean check1(){
         Boolean b = false;
 
-        System.out.println(db.length_table_1());
+        //System.out.println(db.length_table_1());
 
         if (db.length_table_1() == 0){
             error = "deze naam is nog niet gekend in de databse";

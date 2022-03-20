@@ -70,6 +70,7 @@ public class MainActivity7 extends AppCompatActivity {
 
                 if(get2bool()){
                     strings.add(get1());
+                    System.out.println(strings.size());
                 }
 
             }

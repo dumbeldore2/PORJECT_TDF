@@ -43,7 +43,7 @@ public class MainActivity3_bar extends ArrayAdapter<String> {
         textView2.setText(stringData[position]);
         textView3.setText(getNames(position));
 
-        System.out.println(position);
+        //System.out.println(position);
 
         if (position == 4){
         }
