@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity7 extends AppCompatActivity {
 
     //init edits
-    EditText edit1,edit2;
+    EditText edit1, edit2;
 
     //databse initen
     database db;
@@ -23,7 +24,7 @@ public class MainActivity7 extends AppCompatActivity {
     String error;
 
     //textviews initen
-    TextView text4,text7,text8;
+    TextView text4, text6, text7, text8;
 
     //array
     ArrayList<String> strings;
@@ -45,6 +46,7 @@ public class MainActivity7 extends AppCompatActivity {
 
         //text connecten
         text4 = findViewById(R.id.text_4);
+        text6 = findViewById(R.id.text_6);
         text7 = findViewById(R.id.text_7);
         text8 = findViewById(R.id.text_8);
 
@@ -64,74 +66,118 @@ public class MainActivity7 extends AppCompatActivity {
         addUser();
     }
 
-    public void click_1(){
+
+    public void click_1() {
         text4.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
-                if(get2bool()){
-                    strings.add(get1());
-                    System.out.println(strings.size());
+                if (get2bool() && check2(get2())) {
+                    strings.add(get2());
+                    //System.out.println(strings.size());
+                    String uit = "";
+                    for (int i = 0; i < strings.size(); i++) {
+                        uit += "--- " + strings.get(i) + " ---\n";
+                    }
+                    text6.setText(uit);
+                } else {
+                    Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
     }
-    public void click_2(){
+    public void click_2() {
         text7.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
-                startActivity(intent);
+                if (get1bool() && strings.size() >= 2) {
+
+                    db.addToTabel3(get1(), get2db());
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity6.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
     }
-    public void click_3(){
+    public void click_3() {
         text8.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intent);
 
             }
         });
     }
 
-    public String get1(){
+    public String get1() {
         String uit = "";
         uit = edit1.getText().toString();
         return uit;
     }
-    public String get2(){
+    public String get2() {
         String uit = "";
         uit = edit2.getText().toString();
         return uit;
     }
 
-    public boolean get1bool(){
+    public boolean get1bool() {
         Boolean b = false;
-        if (!get1().isEmpty()){
+        if (!get1().isEmpty()) {
             b = true;
             error = "";
         } else {
-            error = "de naam moet ingevuld zijn";
+            error = "de naam van het klassement moet ingevuld zijn of er zijn te weinig spelers " +
+                    "aawezig";
         }
         return b;
     }
-    public boolean get2bool(){
+    public boolean get2bool() {
         Boolean b = false;
-        if (!get2().isEmpty()){
+        if (!get2().isEmpty()) {
             b = true;
             error = "";
         } else {
-            error = "de email moet ingevuld zijn";
+            error = "de naam van de player moet ingevuld zijn";
         }
         return b;
     }
 
-    public void addUser(){
-        if(db.lastStatus().equals("loged in")){
+    public void addUser() {
+        if (db.lastStatus().equals("loged in")) {
             strings.add(db.lastName());
+            text6.setText("--- " + db.lastName() + " ---");
         }
+    }
+
+    public boolean check2(String s) {
+        boolean uit = true;
+
+        for (int i = 0; i < strings.size(); i++) {
+            if (strings.get(i).equals(s)) {
+                uit = false;
+                error = "de naam is al aanwezig";
+            } else {
+                error = "";
+            }
+        }
+        return uit;
+    }
+
+    public String get2db() {
+        String uit = "";
+
+        for (int i = 0; i < strings.size(); i++) {
+            if (i != strings.size() - 1) {
+                uit += strings.get(i) + ",";
+            } else {
+                uit += strings.get(i);
+            }
+        }
+        return uit;
     }
 }

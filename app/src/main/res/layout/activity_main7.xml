@@ -88,7 +88,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
 
-                android:text="deelnemers?"
+                android:text="deelnemers? (2 required)"
                 android:textSize="30dp"
                 android:textColor="@color/c10" />
 

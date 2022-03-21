@@ -14,15 +14,18 @@ import java.awt.font.TextAttribute;
 public class MainActivity3 extends AppCompatActivity {
 
     //textview initen
-    TextView text2;
+    TextView text2,text3;
+
+    //databse initen
+    database db;
 
     //alles met de listview en zijn adapter te maken
     //de listview initen
     ListView listView;
 
     //test data
-    String a[] = {"Team 1","Team 2","Team 3","Team 4","Team 4","Team 4"};
-    String b[] = {"yago,scott,aiko","yago,scott","phara,yago","merel,yago","merel,yago","merel,yago"};
+    String a[] = {"test 1"};
+    String b[] = {"yago,scott,aiko"};
 
     //adapter initen
     MainActivity3_bar mainActivity3_bar;
@@ -40,8 +43,15 @@ public class MainActivity3 extends AppCompatActivity {
 
         //textviews conecten
         text2 = findViewById(R.id.text_2);
+        text3 = findViewById(R.id.text_3);
+
+        //db conecten
+        db = new database(this);
+
 
         //listview stuff
+        //pre listview functies
+        syncdb();
         //listview initen
         listView = findViewById(R.id.list_view_1);
 
@@ -51,6 +61,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         //functies
         click_fun1();
+        click_fun2();
     }
 
     public void click_fun1(){
@@ -60,5 +71,20 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void click_fun2(){
+        text3.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void syncdb(){
+        if (db.t3s1().length != 0){
+            a = db.t3s1();
+            b = db.t3s2();
+        }
     }
 }

@@ -99,7 +99,7 @@ public class database extends SQLiteOpenHelper {
 
         sqLiteDatabase.insert(DATABASE_table_1, null, contentValues);
     }
-    public String[] s1() {
+    public String[] t1s1() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select " + Table_1_col_1 + " from " + DATABASE_table_1 + "", null);
 
@@ -113,7 +113,7 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
-    public String[] s2() {
+    public String[] t1s2() {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor =
                 sqLiteDatabase.rawQuery("select " + Table_1_col_2 + " from " + DATABASE_table_1 + "", null);
@@ -238,11 +238,11 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(Table_3_col_0, IDMAKER_TABLE_2());
+        contentValues.put(Table_3_col_0, IDMAKER_TABLE_3());
         contentValues.put(Table_3_col_1, s1);
         contentValues.put(Table_3_col_7, s2);
 
-        sqLiteDatabase.insert(DATABASE_table_2, null, contentValues);
+        sqLiteDatabase.insert(DATABASE_table_3, null, contentValues);
     }
     public int length_table_3(){
         int uit = 0;
@@ -254,5 +254,35 @@ public class database extends SQLiteOpenHelper {
 
         uit = cursor.getCount();
         return uit;
+    }
+    public String [] t3s1(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_1 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
+    public String [] t3s2(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
     }
 }

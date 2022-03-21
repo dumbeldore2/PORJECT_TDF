@@ -128,8 +128,8 @@ public class MainActivity5 extends AppCompatActivity {
             error = "deze naam is nog niet gekend in de databse";
             } else {
                 if (!get1().isEmpty()){
-                    for (int i = 0; i < db.s1().length; i++){
-                        if (get1().equals(db.s1()[i])){
+                    for (int i = 0; i < db.t1s1().length; i++){
+                        if (get1().equals(db.t1s1()[i])){
                             b = true;
                             error = "";
                         } else {

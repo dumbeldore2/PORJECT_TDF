@@ -164,8 +164,8 @@ public class MainActivity4 extends AppCompatActivity {
     public boolean check1(){
         Boolean b = false;
         if (!get1().isEmpty()){
-            for (int i = 0; i < db.s1().length; i++){
-                if (get1().equals(db.s1()[i])){
+            for (int i = 0; i < db.t1s1().length; i++){
+                if (get1().equals(db.t1s1()[i])){
                     b = true;
                     error = "deze naam is al toegevoegd in de databse";
                 } else {
@@ -178,8 +178,8 @@ public class MainActivity4 extends AppCompatActivity {
     public boolean check2(){
         Boolean b = false;
         if (!get2().isEmpty()){
-            for (int i = 0; i < db.s2().length; i++){
-                if (get2().equals(db.s2()[i])){
+            for (int i = 0; i < db.t1s2().length; i++){
+                if (get2().equals(db.t1s2()[i])){
                     b = true;
                     error = "deze emailadres is al toegevoegd in de databse";
                 } else {
