@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -62,6 +63,7 @@ public class MainActivity3 extends AppCompatActivity {
         //functies
         click_fun1();
         click_fun2();
+        click_fun3();
     }
 
     public void click_fun1(){
@@ -76,6 +78,15 @@ public class MainActivity3 extends AppCompatActivity {
         text3.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity6.class);
+                startActivity(intent);
+            }
+        });
+    }
+    public void click_fun3(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
                 startActivity(intent);
             }
         });

@@ -4,6 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity8">
+    tools:context=".MainActivity8"
+    android:background="@drawable/full_background_ma2">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/text_1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="back"
+            android:textColor="@color/c1"
+            android:textSize="36dp"
+            android:gravity="center"
+            android:background="@drawable/back_background"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.helper.widget.Carousel
+        android:id="@+id/carousel"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraint_1">
+
+    </androidx.constraintlayout.helper.widget.Carousel>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
