@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,11 +16,17 @@ public class MainActivity8 extends AppCompatActivity {
     //textviews initen
     TextView text1;
 
-    //carousel initen
-    Carousel carousel;
+    //alles met de listview en zijn adapter te maken
+    //de listview initen
+    ListView listView;
 
-    //fotos for carousel
-    int [] images = {R.drawable.foto2, R.drawable.foto3, R.drawable.foto4};
+    //test data
+    String a[] = {"renners","renners","renners"};
+    //test data
+    int b[] = {R.drawable.foto2,R.drawable.foto3,R.drawable.foto4};
+
+    //adapter initen
+    MainActivity8_bar mainActivity8_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,25 +42,15 @@ public class MainActivity8 extends AppCompatActivity {
         //text connecten
         text1 = findViewById(R.id.text_1);
 
-        //carousel connecten
-        carousel = findViewById(R.id.carousel);
+        //listview stuff
+        //pre listview functies
 
-        //carousel adapter
-        carousel.setAdapter(new Carousel.Adapter() {
-            @Override
-            public int count() {
-                return images.length;
-            }
+        //listview initen
+        listView = findViewById(R.id.list_view_1);
 
-            @Override
-            public void populate(View view, int index){
-            }
-
-            @Override
-            public void onNewItem(int index) {
-
-            }
-        });
+        //adapter conecten
+        mainActivity8_bar = new MainActivity8_bar(this,a,b);
+        listView.setAdapter(mainActivity8_bar);
 
         //functions
         click_1();

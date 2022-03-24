@@ -18,6 +18,8 @@
         <entry key="..\:/Users/PC001/Documents/AREA_51/githhub Folder/PORJECT_TDF/app/src/main/res/layout/activity_main5.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/PC001/Documents/AREA_51/githhub Folder/PORJECT_TDF/app/src/main/res/layout/activity_main6.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/PC001/Documents/AREA_51/githhub Folder/PORJECT_TDF/app/src/main/res/layout/activity_main7.xml" value="0.25" />
+        <entry key="..\:/Users/PC001/Documents/AREA_51/githhub Folder/PORJECT_TDF/app/src/main/res/layout/activity_main8.xml" value="0.2" />
+        <entry key="..\:/Users/PC001/Documents/AREA_51/githhub Folder/PORJECT_TDF/app/src/main/res/layout/activity_main_activity8_bar.xml" value="0.2015625" />
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/bot_title_ma1_gradiant.xml" value="0.236" />
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_bollen.xml" value="0.236" />
         <entry key="..\:/Users/yagoe/AndroidStudioProjects/PORJECT_TDF/app/src/main/res/drawable/button_background_green.xml" value="0.236" />
@@ -48,7 +50,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
