@@ -18,6 +18,9 @@ public class MainActivity8 extends AppCompatActivity {
     //carousel initen
     Carousel carousel;
 
+    //fotos for carousel
+    int [] images = {R.drawable.foto2, R.drawable.foto3, R.drawable.foto4};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,23 @@ public class MainActivity8 extends AppCompatActivity {
 
         //carousel connecten
         carousel = findViewById(R.id.carousel);
+
+        //carousel adapter
+        carousel.setAdapter(new Carousel.Adapter() {
+            @Override
+            public int count() {
+                return images.length;
+            }
+
+            @Override
+            public void populate(View view, int index){
+            }
+
+            @Override
+            public void onNewItem(int index) {
+
+            }
+        });
 
         //functions
         click_1();
