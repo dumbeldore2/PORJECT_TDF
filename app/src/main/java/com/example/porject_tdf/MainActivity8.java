@@ -21,7 +21,7 @@ public class MainActivity8 extends AppCompatActivity {
     ListView listView;
 
     //test data
-    String a[] = {"renners","renners","renners"};
+    String a[] = {"renners","ettapes","truinen"};
     //test data
     int b[] = {R.drawable.foto2,R.drawable.foto3,R.drawable.foto4};
 
