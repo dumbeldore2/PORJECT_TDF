@@ -70,7 +70,6 @@ public class MainActivity8 extends AppCompatActivity {
             }
         });
     }
-
     public void click_2(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
