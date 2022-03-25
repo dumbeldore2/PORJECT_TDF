@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
@@ -13,6 +14,15 @@ public class MainActivity9 extends AppCompatActivity {
     //textviews initen
     TextView text2;
 
+    //alles met de listview en zijn adapter te maken
+    //de listview initen
+    ListView listView;
+
+    //test data
+    String a[] = {"yago","scott","aiko"};
+
+    //adapter initen
+    MainActivity9_bar mainActivity9_bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +36,16 @@ public class MainActivity9 extends AppCompatActivity {
 
         //text connecten
         text2 = findViewById(R.id.text_2);
+
+        //listview stuff
+        //pre listview functies
+
+        //listview initen
+        listView = findViewById(R.id.list_view_1);
+
+        //adapter conecten
+        mainActivity9_bar = new MainActivity9_bar(this,a);
+        listView.setAdapter(mainActivity9_bar);
 
         //functions
         click_1();

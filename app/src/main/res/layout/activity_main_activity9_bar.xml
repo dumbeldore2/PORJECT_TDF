@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity9_bar">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_1"
+
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text=""
+            android:textColor="@color/c10"
+            android:textSize="15dp"
+
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/text_2"
+
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+
+            android:text="tjv"
+            android:textColor="@color/c10"
+            android:textSize="15dp"
+
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/text_3"
+
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            android:text="bel"
+            android:textColor="@color/c10"
+            android:textSize="15dp"
+
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/image_3"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/image_4"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/text_4"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="yago"
+            android:textColor="@color/c10"
+            android:textSize="15dp"
+
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
