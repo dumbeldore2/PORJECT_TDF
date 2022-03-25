@@ -12,14 +12,14 @@ import android.widget.TextView;
 public class MainActivity9 extends AppCompatActivity {
 
     //textviews initen
-    TextView text2;
+    TextView text2,text3;
 
     //alles met de listview en zijn adapter te maken
     //de listview initen
     ListView listView;
 
     //test data
-    String a[] = {"yago","scott","aiko"};
+    String a[] = {"yago","scott","aiko","aiko","aiko","aiko","aiko","aiko"};
 
     //adapter initen
     MainActivity9_bar mainActivity9_bar;
@@ -36,6 +36,7 @@ public class MainActivity9 extends AppCompatActivity {
 
         //text connecten
         text2 = findViewById(R.id.text_2);
+        text3 = findViewById(R.id.text_3);
 
         //listview stuff
         //pre listview functies
@@ -49,11 +50,22 @@ public class MainActivity9 extends AppCompatActivity {
 
         //functions
         click_1();
+        click_2();
     }
 
 
     public void click_1() {
         text2.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+    public void click_2() {
+        text3.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
