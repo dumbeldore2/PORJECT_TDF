@@ -74,9 +74,17 @@ public class MainActivity8 extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 2){
-                    Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
-                    startActivity(intent);
+                switch (position){
+                    case 0:
+                        Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        intent = new Intent(getApplicationContext(),MainActivity2.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });

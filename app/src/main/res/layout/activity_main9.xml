@@ -4,6 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity9">
+    tools:context=".MainActivity9"
+    android:background="@drawable/full_background_ma2">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_1"
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:background="@drawable/foto7">
+
+        <TextView
+            android:id="@+id/text_1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="renners"
+            android:textColor="@color/c10"
+            android:textSize="63dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_1"
+
+        android:layout_marginTop="-50dp"
+
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/list_view_1"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
