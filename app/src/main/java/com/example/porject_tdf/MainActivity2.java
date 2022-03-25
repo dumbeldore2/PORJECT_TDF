@@ -3,6 +3,7 @@ package com.example.porject_tdf;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity {
 
     //textvieuws initen
-    TextView textView_1, textView_2,textView_3,textView_4;
+    TextView textView_1, textView_2,textView_3,textView_4,textView_5;
 
     //image view intien
     ImageView imageView_1;
@@ -36,6 +37,7 @@ public class MainActivity2 extends AppCompatActivity {
         textView_2 = findViewById(R.id.text_2);
         textView_3 = findViewById(R.id.text_3);
         textView_4 = findViewById(R.id.text_4);
+        textView_5 = findViewById(R.id.text_5);
 
         //imageview conecten
         imageView_1 = findViewById(R.id.image_1);
@@ -46,6 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
         //functions
         setToYellow();
         clickListners();
+        click_fun1();
     }
 
     public void setToYellow(){
@@ -59,7 +62,6 @@ public class MainActivity2 extends AppCompatActivity {
         textView_4.setText("GEEL");
         textView_4.setTextColor(getResources().getColor(R.color.c6));
     }
-
     public void setToGreen(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_yellow));
@@ -71,7 +73,6 @@ public class MainActivity2 extends AppCompatActivity {
         textView_4.setText("GROEN");
         textView_4.setTextColor(getResources().getColor(R.color.c7));
     }
-
     public void setToWit(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_green));
@@ -83,7 +84,6 @@ public class MainActivity2 extends AppCompatActivity {
         textView_4.setText("WIT");
         textView_4.setTextColor(getResources().getColor(R.color.c9));
     }
-
     public void setToBol(){
         textView_1.setBackground(ContextCompat.getDrawable(this,
                 R.drawable.button_background_wit));
@@ -141,6 +141,16 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     c ++;
                 }
+            }
+        });
+    }
+
+    public void click_fun1(){
+        textView_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity8.class);
+                startActivity(intent);
             }
         });
     }

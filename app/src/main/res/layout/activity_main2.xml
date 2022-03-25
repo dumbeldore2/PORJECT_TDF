@@ -89,4 +89,34 @@
 
         android:textColor="@color/c6"/>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_4"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_3"
+
+        android:layout_margin="5dp">
+
+
+        <TextView
+            android:id="@+id/text_5"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="back"
+            android:textColor="@color/c1"
+            android:textSize="36dp"
+            android:gravity="center"
+            android:background="@drawable/back_background"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
