@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,6 +55,7 @@ public class MainActivity8 extends AppCompatActivity {
 
         //functions
         click_1();
+        click_2();
     }
 
 
@@ -65,6 +67,18 @@ public class MainActivity8 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intent);
 
+            }
+        });
+    }
+
+    public void click_2(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 2){
+                    Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                    startActivity(intent);
+                }
             }
         });
     }
