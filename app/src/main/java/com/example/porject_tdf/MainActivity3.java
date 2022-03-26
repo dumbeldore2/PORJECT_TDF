@@ -25,8 +25,8 @@ public class MainActivity3 extends AppCompatActivity {
     ListView listView;
 
     //test data
-    String a[] = {"test 1"};
-    String b[] = {"yago,scott,aiko"};
+    String a[] = {""};
+    String b[] = {""};
 
     //adapter initen
     MainActivity3_bar mainActivity3_bar;
@@ -50,16 +50,18 @@ public class MainActivity3 extends AppCompatActivity {
         db = new database(this);
 
 
-        //listview stuff
-        //pre listview functies
-        syncdb();
-        //listview initen
-        listView = findViewById(R.id.list_view_1);
+        if(db.length_table_3() != 0){
+            //listview stuff
+            //pre listview functies
+            syncdb();
+            //listview initen
+            listView = findViewById(R.id.list_view_1);
 
-        //adapter conecten
-        mainActivity3_bar = new MainActivity3_bar(this,a,b);
-        listView.setAdapter(mainActivity3_bar);
+            //adapter conecten
+            mainActivity3_bar = new MainActivity3_bar(this,a,b);
+            listView.setAdapter(mainActivity3_bar);
 
+        }
         //functies
         click_fun1();
         click_fun2();
@@ -83,13 +85,19 @@ public class MainActivity3 extends AppCompatActivity {
         });
     }
     public void click_fun3(){
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
-                startActivity(intent);
-            }
-        });
+        if(db.length_table_3() != 0){
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
+
+                    System.out.println(i);
+                    System.out.println(db.getTable_3_col_7(i));
+
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
     public void syncdb(){

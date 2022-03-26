@@ -78,6 +78,7 @@ public class MainActivity7 extends AppCompatActivity {
                     for (int i = 0; i < strings.size(); i++) {
                         uit += "--- " + strings.get(i) + " ---\n";
                     }
+                    edit2.setText("");
                     text6.setText(uit);
                 } else {
                     Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
