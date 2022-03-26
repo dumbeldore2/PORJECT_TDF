@@ -285,4 +285,14 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
+    public void addNameToTable3Klassement(String s1, int id){
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_3_col_7, s2);
+
+        sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
+    }
+    public String
 }
