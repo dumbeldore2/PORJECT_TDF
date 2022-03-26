@@ -173,10 +173,6 @@
 
                     android:gravity="center"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
