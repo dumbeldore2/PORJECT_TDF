@@ -294,5 +294,7 @@ public class database extends SQLiteOpenHelper {
 
         sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
     }
-    public String
+    public String getTable_3_col_7(int id){
+
+    }
 }
