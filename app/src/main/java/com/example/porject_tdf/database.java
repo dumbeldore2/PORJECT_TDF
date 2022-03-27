@@ -270,7 +270,7 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
-    public String [] t3s2(){
+    public String [] t3s7(){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor =
                 sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + "", null);
@@ -285,12 +285,31 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
+    public String [] t3s7Id( int id){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
     public void addNameToTable3Klassement(String s1, int id){
+
+        String uit = getTable_3_col_7(id);
+        uit += "," + s1;
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(Table_3_col_7, s1);
+        contentValues.put(Table_3_col_7, uit);
 
         sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
     }

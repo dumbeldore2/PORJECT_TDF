@@ -91,8 +91,7 @@ public class MainActivity3 extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
 
-                    System.out.println(i);
-                    System.out.println(db.getTable_3_col_7(i));
+                    intent.putExtra("id",i);
 
                     startActivity(intent);
                 }
@@ -103,7 +102,7 @@ public class MainActivity3 extends AppCompatActivity {
     public void syncdb(){
         if (db.t3s1().length != 0){
             a = db.t3s1();
-            b = db.t3s2();
+            b = db.t3s7();
         }
     }
 }

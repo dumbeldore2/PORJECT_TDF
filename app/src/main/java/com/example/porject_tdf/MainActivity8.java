@@ -13,9 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity8 extends AppCompatActivity {
-
     //textviews initen
     TextView text1;
+
+    //inent stuff
+    Intent intent;
+    int idList;
 
     //alles met de listview en zijn adapter te maken
     //de listview initen
@@ -39,6 +42,10 @@ public class MainActivity8 extends AppCompatActivity {
         );
         getWindow().setNavigationBarColor(getResources().getColor(R.color.c1));
         getWindow().setStatusBarColor(getResources().getColor(R.color.c1));
+
+        //intent stuff
+        intent = getIntent();
+        idList = intent.getIntExtra("id",-1);
 
         //text connecten
         text1 = findViewById(R.id.text_1);
@@ -77,6 +84,9 @@ public class MainActivity8 extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
+
+                        intent.putExtra("id",idList);
+
                         startActivity(intent);
                         break;
                     case 1:
