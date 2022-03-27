@@ -66,7 +66,6 @@ public class database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_3);
     }
 
-
     //table 1
     public int IDMAKER_TABLE_1(){
         int uit = -1;
