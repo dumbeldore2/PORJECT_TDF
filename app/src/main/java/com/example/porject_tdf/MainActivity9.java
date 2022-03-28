@@ -118,7 +118,7 @@ public class MainActivity9 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if(get1bool()){
-                            db.addNameToTable3Klassement(get1(),idList);
+                            db.addToT3C7(get1(),idList);
                             syncdb();
                             mainActivity9_bar = new MainActivity9_bar(getApplicationContext(),a);
                             listView.setAdapter(mainActivity9_bar);

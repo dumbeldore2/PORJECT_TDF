@@ -237,8 +237,24 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
+        String [] s2Ar = s2.split(",");
+        String jerseys = "";
+
+        for (int i = 0 ; i < s2Ar.length; i++){
+            if (i == 0){
+                jerseys += s2Ar[i] + "=0";
+            } else {
+                jerseys +="," + s2Ar[i] + "=0";
+            }
+        }
+
         contentValues.put(Table_3_col_0, IDMAKER_TABLE_3());
         contentValues.put(Table_3_col_1, s1);
+        contentValues.put(Table_3_col_2, "inactief");
+        contentValues.put(Table_3_col_3, jerseys);
+        contentValues.put(Table_3_col_4, jerseys);
+        contentValues.put(Table_3_col_5, jerseys);
+        contentValues.put(Table_3_col_6, jerseys);
         contentValues.put(Table_3_col_7, s2);
 
         sqLiteDatabase.insert(DATABASE_table_3, null, contentValues);
@@ -284,38 +300,71 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
-    public String [] t3s7Id( int id){
-        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        Cursor cursor =
-                sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+    public void addToT3C3(String s1, int id){
 
-        String[] uits = new String[cursor.getCount()];
-
-        for (int i = 0; i <= cursor.getCount(); i++) {
-            if (cursor.moveToPosition(i)) {
-                StringBuffer stringBuffer = new StringBuffer();
-                stringBuffer.append(cursor.getString(0));
-                uits[i] = stringBuffer.toString();
-            }
-        }
-        return uits;
-    }
-    public void addNameToTable3Klassement(String s1, int id){
-
-        String uit = getTable_3_col_7(id);
+        String uit = getTable_3_col_3(id);
         uit += "," + s1;
 
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(Table_3_col_7, uit);
+        contentValues.put(Table_3_col_3, uit);
 
         sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
     }
-    public String getTable_3_col_7(int id){
+    public void addToT3C4(String s1, int id){
+
+        String uit = getTable_3_col_4(id);
+        uit += "," + s1;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_3_col_4, uit);
+
+        sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
+    }
+    public void addToT3C5(String s1, int id){
+
+        String uit = getTable_3_col_5(id);
+        uit += "," + s1;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_3_col_5, uit);
+
+        sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
+    }
+    public void addToT3C6(String s1, int id){
+
+        String uit = getTable_3_col_6(id);
+        uit += "," + s1;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_3_col_6, uit);
+
+        sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
+    }
+    public void addToT3C7(String s1, int id){
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_3_col_3, getTable_3_col_3(id) + ","+s1+"=0");
+        contentValues.put(Table_3_col_4, getTable_3_col_3(id) + ","+s1+"=0");
+        contentValues.put(Table_3_col_5, getTable_3_col_3(id) + ","+s1+"=0");
+        contentValues.put(Table_3_col_6, getTable_3_col_3(id) + ","+s1+"=0");
+        contentValues.put(Table_3_col_7, getTable_3_col_7(id) + ","+s1);
+
+        sqLiteDatabase.update(DATABASE_table_3, contentValues, Table_3_col_0+" = ?",new String[]{id + ""});
+    }
+    public String getTable_3_col_3(int id){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor =
-                sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+                sqLiteDatabase.rawQuery("select " + Table_3_col_3 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
 
         String uit = "";
         for (int i = 0; i <= cursor.getCount(); i++) {
@@ -327,4 +376,64 @@ public class database extends SQLiteOpenHelper {
         }
         return uit;
     }
+    public String getTable_3_col_4(int id){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_4 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
+            }
+        }
+        return uit;
+    }
+    public String getTable_3_col_5(int id){
+                SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+                Cursor cursor =
+                        sqLiteDatabase.rawQuery("select " + Table_3_col_5 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+
+                String uit = "";
+                for (int i = 0; i <= cursor.getCount(); i++) {
+                    if (cursor.moveToPosition(i)) {
+                        StringBuffer stringBuffer = new StringBuffer();
+                        stringBuffer.append(cursor.getString(0));
+                        uit = stringBuffer.toString();
+                    }
+                }
+                return uit;
+            }
+    public String getTable_3_col_6(int id){
+                SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+                Cursor cursor =
+                        sqLiteDatabase.rawQuery("select " + Table_3_col_6 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+
+                String uit = "";
+                for (int i = 0; i <= cursor.getCount(); i++) {
+                    if (cursor.moveToPosition(i)) {
+                        StringBuffer stringBuffer = new StringBuffer();
+                        stringBuffer.append(cursor.getString(0));
+                        uit = stringBuffer.toString();
+                    }
+                }
+                return uit;
+            }
+    public String getTable_3_col_7(int id){
+                SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+                Cursor cursor =
+                        sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+
+                String uit = "";
+                for (int i = 0; i <= cursor.getCount(); i++) {
+                    if (cursor.moveToPosition(i)) {
+                        StringBuffer stringBuffer = new StringBuffer();
+                        stringBuffer.append(cursor.getString(0));
+                        uit = stringBuffer.toString();
+                    }
+                }
+                return uit;
+            }
 }
