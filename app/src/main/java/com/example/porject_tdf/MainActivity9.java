@@ -42,6 +42,10 @@ public class MainActivity9 extends AppCompatActivity {
 
     //test data
     String a[] = {""};
+    int b = -1;
+    int c = -1;
+    int d = -1;
+    int e = -1;
 
     //adapter initen
     MainActivity9_bar mainActivity9_bar;
@@ -82,7 +86,7 @@ public class MainActivity9 extends AppCompatActivity {
             listView = findViewById(R.id.list_view_1);
 
             //adapter conecten
-            mainActivity9_bar = new MainActivity9_bar(this,a);
+            mainActivity9_bar = new MainActivity9_bar(this,a,b,c,d,e);
             listView.setAdapter(mainActivity9_bar);
         }
 
@@ -90,7 +94,6 @@ public class MainActivity9 extends AppCompatActivity {
         click_1();
         click_2();
     }
-
 
     public void click_1() {
         text2.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +123,8 @@ public class MainActivity9 extends AppCompatActivity {
                         if(get1bool()){
                             db.addToT3C7(get1(),idList);
                             syncdb();
-                            mainActivity9_bar = new MainActivity9_bar(getApplicationContext(),a);
+                            mainActivity9_bar = new MainActivity9_bar(getApplicationContext(),a,b
+                                    ,c,d,e);
                             listView.setAdapter(mainActivity9_bar);
                         }
                         dialog.dismiss();
@@ -175,6 +179,10 @@ public class MainActivity9 extends AppCompatActivity {
     public void syncdb(){
         if (db.t3s7().length != 0){
             a = db.t3s7()[0].split(",");
+            b = db.bol(idList);
+            c = db.wit(idList);
+            d = db.groen(idList);
+            e = db.geel(idList);
         }
     }
 }

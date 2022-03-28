@@ -97,8 +97,11 @@ public class MainActivity7 extends AppCompatActivity {
 
                     Intent intent = new Intent(getApplicationContext(), MainActivity6.class);
                     startActivity(intent);
+
                 } else {
+
                     Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT).show();
+
                 }
 
             }
@@ -116,54 +119,81 @@ public class MainActivity7 extends AppCompatActivity {
     }
 
     public String get1() {
+
         String uit = "";
         uit = edit1.getText().toString();
         return uit;
+
     }
     public String get2() {
+
         String uit = "";
         uit = edit2.getText().toString();
         return uit;
+
     }
 
     public boolean get1bool() {
+
         Boolean b = false;
+
         if (!get1().isEmpty()) {
+
             b = true;
             error = "";
+
         } else {
+
             error = "de naam van het klassement moet ingevuld zijn of er zijn te weinig spelers " +
                     "aawezig";
+
         }
         return b;
     }
     public boolean get2bool() {
+
         Boolean b = false;
+
         if (!get2().isEmpty()) {
+
             b = true;
             error = "";
+
         } else {
+
             error = "de naam van de player moet ingevuld zijn";
+
         }
+
         return b;
     }
 
     public void addUser() {
+
         if (db.lastStatus().equals("loged in")) {
+
             strings.add(db.lastName());
             text6.setText("--- " + db.lastName() + " ---");
+
         }
+
     }
 
     public boolean check2(String s) {
+
         boolean uit = true;
 
         for (int i = 0; i < strings.size(); i++) {
+
             if (strings.get(i).equals(s)) {
+
                 uit = false;
                 error = "de naam is al aanwezig";
+
             } else {
+
                 error = "";
+
             }
         }
         return uit;
@@ -174,9 +204,13 @@ public class MainActivity7 extends AppCompatActivity {
 
         for (int i = 0; i < strings.size(); i++) {
             if (i != strings.size() - 1) {
+
                 uit += strings.get(i) + ",";
+
             } else {
+
                 uit += strings.get(i);
+
             }
         }
         return uit;

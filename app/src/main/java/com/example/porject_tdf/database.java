@@ -285,6 +285,66 @@ public class database extends SQLiteOpenHelper {
         }
         return uits;
     }
+    public String [] t3s3(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_3 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
+    public String [] t3s4(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_4 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
+    public String [] t3s5(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_5 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
+    public String [] t3s6(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_6 + " from " + DATABASE_table_3 + "", null);
+
+        String[] uits = new String[cursor.getCount()];
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uits[i] = stringBuffer.toString();
+            }
+        }
+        return uits;
+    }
     public String [] t3s7(){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor =
@@ -422,18 +482,101 @@ public class database extends SQLiteOpenHelper {
                 return uit;
             }
     public String getTable_3_col_7(int id){
-                SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-                Cursor cursor =
-                        sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_3_col_7 + " from " + DATABASE_table_3 + " where " + Table_3_col_0 + " == " + id + "", null);
 
-                String uit = "";
-                for (int i = 0; i <= cursor.getCount(); i++) {
-                    if (cursor.moveToPosition(i)) {
-                        StringBuffer stringBuffer = new StringBuffer();
-                        stringBuffer.append(cursor.getString(0));
-                        uit = stringBuffer.toString();
-                    }
-                }
-                return uit;
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
             }
+        }
+        return uit;
+    }
+    public int bol(int id){
+        String naam = "";
+        int punten = -1;
+        int pos = -1;
+
+        String [] klassement = getTable_3_col_3(id).split(",");
+
+        for (int i = 0 ; i < klassement.length ; i ++){
+            System.out.println(klassement[i]);
+            String [] cijfer = klassement[i].split("=");
+            if (Integer.parseInt(cijfer[1]) > punten){
+
+                punten = Integer.parseInt(cijfer[1]);
+                naam = cijfer[0];
+                pos = i;
+
+            }
+        }
+        return pos;
+    }
+    public int wit(int id){
+        String naam = "";
+        int punten = -1;
+        int pos = -1;
+
+        String [] klassement = getTable_3_col_4(id).split(",");
+
+        for (int i = 0 ; i < klassement.length ; i ++){
+            System.out.println(klassement[i]);
+            String [] cijfer = klassement[i].split("=");
+            if (Integer.parseInt(cijfer[1]) > punten){
+
+                punten = Integer.parseInt(cijfer[1]);
+                naam = cijfer[0];
+                pos = i;
+
+            }
+        }
+
+        return pos;
+    }
+    public int groen(int id){
+        String naam = "";
+        int punten = -1;
+        int pos = -1;
+
+        String [] klassement = getTable_3_col_5(id).split(",");
+
+        for (int i = 0 ; i < klassement.length ; i ++){
+            System.out.println(klassement[i]);
+            String [] cijfer = klassement[i].split("=");
+            if (Integer.parseInt(cijfer[1]) > punten){
+
+                punten = Integer.parseInt(cijfer[1]);
+                naam = cijfer[0];
+                pos = i;
+
+            }
+        }
+
+        return pos;
+    }
+    public int geel(int id){
+        String naam = "";
+        int punten = -1;
+        int pos = -1;
+
+        String [] klassement = getTable_3_col_6(id).split(",");
+
+        for (int i = 0 ; i < klassement.length ; i ++){
+            System.out.println(klassement[i]);
+            String [] cijfer = klassement[i].split("=");
+            if (Integer.parseInt(cijfer[1]) > punten){
+
+                punten = Integer.parseInt(cijfer[1]);
+                naam = cijfer[0];
+                pos = i;
+
+            }
+        }
+
+        return pos;
+    }
 }

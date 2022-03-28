@@ -18,12 +18,21 @@ public class MainActivity9_bar  extends ArrayAdapter<String> {
 
     Context context;
     String stringData[];
+    int Data2;
+    int Data3;
+    int Data4;
+    int Data5;
 
-    public MainActivity9_bar(@NonNull Context c, String resource[]) {
+    public MainActivity9_bar(@NonNull Context c, String resource[], int resource2, int resource3,
+                             int resource4, int resource5) {
         super(c,R.layout.activity_main_activity3_bar,resource);
 
         this.context = c;
         this.stringData = resource;
+        this.Data2 = resource2;
+        this.Data3 = resource3;
+        this.Data4 = resource4;
+        this.Data5 = resource5;
     }
 
     @NonNull
@@ -47,10 +56,18 @@ public class MainActivity9_bar  extends ArrayAdapter<String> {
         textView1.setText(position+"");
         textView4.setText(stringData[position]);
 
-        imageView1.setBackground(ContextCompat.getDrawable(context, R.drawable.geel));
-        imageView2.setBackground(ContextCompat.getDrawable(context, R.drawable.groen));
-        imageView3.setBackground(ContextCompat.getDrawable(context, R.drawable.wit));
-        imageView4.setBackground(ContextCompat.getDrawable(context, R.drawable.bol));
+        if (Data2 == position){
+            imageView4.setBackground(ContextCompat.getDrawable(context, R.drawable.bol));
+        }
+        if (Data3 == position){
+            imageView3.setBackground(ContextCompat.getDrawable(context, R.drawable.wit));
+        }
+        if (Data4 == position){
+            imageView2.setBackground(ContextCompat.getDrawable(context, R.drawable.groen));
+        }
+        if (Data5 == position){
+            imageView1.setBackground(ContextCompat.getDrawable(context, R.drawable.geel));
+        }
 
         return row;
     }
