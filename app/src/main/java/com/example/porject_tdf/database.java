@@ -504,7 +504,6 @@ public class database extends SQLiteOpenHelper {
         String [] klassement = getTable_3_col_3(id).split(",");
 
         for (int i = 0 ; i < klassement.length ; i ++){
-            System.out.println(klassement[i]);
             String [] cijfer = klassement[i].split("=");
             if (Integer.parseInt(cijfer[1]) > punten){
 
@@ -524,7 +523,6 @@ public class database extends SQLiteOpenHelper {
         String [] klassement = getTable_3_col_4(id).split(",");
 
         for (int i = 0 ; i < klassement.length ; i ++){
-            System.out.println(klassement[i]);
             String [] cijfer = klassement[i].split("=");
             if (Integer.parseInt(cijfer[1]) > punten){
 
@@ -545,7 +543,6 @@ public class database extends SQLiteOpenHelper {
         String [] klassement = getTable_3_col_5(id).split(",");
 
         for (int i = 0 ; i < klassement.length ; i ++){
-            System.out.println(klassement[i]);
             String [] cijfer = klassement[i].split("=");
             if (Integer.parseInt(cijfer[1]) > punten){
 
@@ -566,7 +563,6 @@ public class database extends SQLiteOpenHelper {
         String [] klassement = getTable_3_col_6(id).split(",");
 
         for (int i = 0 ; i < klassement.length ; i ++){
-            System.out.println(klassement[i]);
             String [] cijfer = klassement[i].split("=");
             if (Integer.parseInt(cijfer[1]) > punten){
 
