@@ -84,15 +84,17 @@ public class MainActivity8 extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
-
                         intent.putExtra("id",idList);
-
                         startActivity(intent);
                         break;
                     case 1:
+                        intent = new Intent(getApplicationContext(),MainActivity10.class);
+                        intent.putExtra("id",idList);
+                        startActivity(intent);
                         break;
                     case 2:
                         intent = new Intent(getApplicationContext(),MainActivity2.class);
+                        intent.putExtra("id",idList);
                         startActivity(intent);
                         break;
                 }

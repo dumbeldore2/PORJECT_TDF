@@ -1,106 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity3"
+    tools:context=".MainActivity10"
     android:background="@drawable/full_background_ma2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_1"
 
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
 
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:background="@drawable/truiencombo">
+        android:background="@drawable/foto8">
+
         <TextView
             android:id="@+id/text_1"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:text="ettapes"
+            android:textColor="@color/c10"
+            android:textSize="63dp"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
 
-            android:text="Klassementen"
-            android:textSize="48dp"
-            android:textColor="@color/c10"
             android:background="@drawable/background_title_t1_ma3"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_2"
+    <LinearLayout
+        android:id="@+id/linear1"
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="150dp"
+        android:layout_height="450dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraint_1"
 
-        android:background="@drawable/background_listview_ma_3">
+        android:layout_marginTop="-50dp"
+
+        android:orientation="vertical"
+
+        android:background="@drawable/background_listview_item_ma_3">
 
         <ListView
             android:id="@+id/list_view_1"
 
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent" />
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            android:layout_marginBottom="25dp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <TextView
-        android:id="@+id/text_2"
-
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_2"
-
-        android:text="ADD klassement"
-        android:textColor="@color/c10"
-        android:textSize="36dp"
-        android:gravity="center"
-
-        android:layout_marginTop="-250dp"
-
-        android:background="@drawable/add_background"/>
-
+    </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_4"
+        android:id="@+id/constraint_2"
 
         android:layout_width="match_parent"
         android:layout_height="50dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_2"
+        app:layout_constraintBottom_toBottomOf="parent"
 
         android:layout_margin="5dp">
 
-
         <TextView
-            android:id="@+id/text_3"
+            android:id="@+id/text_2"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -115,4 +88,36 @@
             android:background="@drawable/back_background"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_3"
+
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraint_2"
+
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/text_3"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="add"
+            android:textColor="@color/c10"
+            android:textSize="36dp"
+            android:gravity="center"
+
+            android:background="@drawable/add_background"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
