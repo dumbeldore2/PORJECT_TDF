@@ -73,119 +73,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraint_1"
 
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+
+        android:background="@drawable/background_listview_item_ma_3">
         <TextView
             android:id="@+id/text_3"
 
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="match_parent"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
 
-            android:text="email?"
+            android:text="Winnaars"
+
+            android:gravity="center"
+
             android:textSize="30dp"
             android:textColor="@color/c10" />
-
-        <EditText
-            android:id="@+id/edit_2"
-
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_3"
-
-            android:inputType="textEmailAddress"
-            android:hint="Email here"
-            android:textColor="@color/c10"
-            android:textColorHint="@color/c10"
-            android:textSize="25dp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_3"
-
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_2"
-
-        android:layout_margin="5dp">
-        <TextView
-            android:id="@+id/text_4"
-
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            android:text="leeftijd?"
-            android:textSize="30dp"
-            android:textColor="@color/c10" />
-
-        <EditText
-            android:id="@+id/edit_3"
-
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_4"
-
-            android:inputType="date"
-            android:hint="Leeftijd here"
-            android:textColor="@color/c10"
-            android:textColorHint="@color/c10"
-            android:textSize="25dp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_4"
-
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint_3"
-
-        android:layout_margin="5dp">
-        <TextView
-            android:id="@+id/text_5"
-
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            android:text="gewicht?"
-            android:textSize="30dp"
-            android:textColor="@color/c10" />
-
-        <EditText
-            android:id="@+id/edit_4"
-
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_5"
-
-            android:inputType="number"
-            android:hint="gewicht here"
-            android:textColor="@color/c10"
-            android:textColorHint="@color/c10"
-            android:textSize="25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_5"
