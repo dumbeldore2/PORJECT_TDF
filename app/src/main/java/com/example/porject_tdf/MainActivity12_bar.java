@@ -57,19 +57,6 @@ public class MainActivity12_bar  extends ArrayAdapter<String> {
         textView1.setText(position+"");
         textView4.setText(stringData[position]);
 
-        if (Data2 == position){
-            imageView4.setBackground(ContextCompat.getDrawable(context, R.drawable.bol));
-        }
-        if (Data3 == position){
-            imageView3.setBackground(ContextCompat.getDrawable(context, R.drawable.wit));
-        }
-        if (Data4 == position){
-            imageView2.setBackground(ContextCompat.getDrawable(context, R.drawable.groen));
-        }
-        if (Data5 == position){
-            imageView1.setBackground(ContextCompat.getDrawable(context, R.drawable.geel));
-        }
-
         return row;
     }
 }
