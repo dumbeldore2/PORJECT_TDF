@@ -49,6 +49,8 @@ public class MainActivity12_bar  extends ArrayAdapter<String> {
         textView3 = row.findViewById(R.id.text_3);
         textView4 = row.findViewById(R.id.text_4);
 
+
+
         imageView1 = row.findViewById(R.id.image_1);
         imageView2 = row.findViewById(R.id.image_2);
         imageView3 = row.findViewById(R.id.image_3);
