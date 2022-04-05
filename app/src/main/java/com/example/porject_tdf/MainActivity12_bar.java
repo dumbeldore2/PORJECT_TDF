@@ -29,6 +29,7 @@ public class MainActivity12_bar  extends ArrayAdapter<String> {
 
         this.context = c;
         this.stringData = resource;
+
         this.Data2 = resource2;
         this.Data3 = resource3;
         this.Data4 = resource4;
