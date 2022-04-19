@@ -20,6 +20,9 @@ public class MainActivity8 extends AppCompatActivity {
     Intent intent;
     int idList;
 
+    //databse initen
+    database db;
+
     //alles met de listview en zijn adapter te maken
     //de listview initen
     ListView listView;
@@ -49,6 +52,9 @@ public class MainActivity8 extends AppCompatActivity {
 
         //text connecten
         text1 = findViewById(R.id.text_1);
+
+        //db conecten
+        db = new database(this);
 
         //listview stuff
         //pre listview functies
@@ -84,7 +90,7 @@ public class MainActivity8 extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
-                        intent.putExtra("id",idList);
+                        db.addToTabel4("open",position);
                         startActivity(intent);
                         break;
                     case 1:

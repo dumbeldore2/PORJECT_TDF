@@ -63,7 +63,7 @@ public class MainActivity9 extends AppCompatActivity {
         //intent stuff
         intent = getIntent();
         idList = intent.getIntExtra("id",-1);
-        System.out.println(idList);
+        //System.out.println(idList);
 
         //database conecten
         db = new database(this);
@@ -101,6 +101,7 @@ public class MainActivity9 extends AppCompatActivity {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
+                intent.putExtra("id",idList);
                 startActivity(intent);
 
             }
@@ -179,7 +180,9 @@ public class MainActivity9 extends AppCompatActivity {
 
     public void syncdb(){
         if (db.t3s7().length != 0){
+            System.out.println(idList);
             a = db.t3s7()[idList].split(",");
+            System.out.println(a.length);
             b = db.bol(idList);
             c = db.wit(idList);
             d = db.groen(idList);

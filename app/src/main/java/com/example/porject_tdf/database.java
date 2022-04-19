@@ -38,6 +38,12 @@ public class database extends SQLiteOpenHelper {
     public static final String Table_3_col_6 = "c_geel";
     public static final String Table_3_col_7 = "c_field";
 
+    //tabel 4
+    public static final String DATABASE_table_4 = "c_log";
+    public static final String Table_4_col_0 = "c_log_id";
+    public static final String Table_4_col_1 = "c_log_naam";
+    public static final String Table_4_col_2 = "c_log_status";
+    public static final String Table_4_col_3 = "c_log_id_c";
 
     public database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -57,6 +63,10 @@ public class database extends SQLiteOpenHelper {
                 " primary key ,"
                 + Table_3_col_1 + " TEXT default 'def'," + Table_3_col_2 + " TEXT default 'def'," + Table_3_col_3 +
                 "  TEXT default 'def'," + Table_3_col_4 + " TEXT default 'def'," + Table_3_col_5 + " TEXT default 'def'," + Table_3_col_6 + " TEXT default 'def'," + Table_3_col_7 + " TEXT default 'def')");
+
+        db.execSQL("create table " + DATABASE_table_4 + "(" + Table_4_col_0 + " INTEGER DEFAULT " +
+                "0 primary key ," + Table_4_col_1 + "TEXT default 'def' ," + Table_4_col_2 +
+                "TEXT default 'def' , "+ Table_4_col_3 +" INTEGER )");
     }
 
     @Override
@@ -64,6 +74,7 @@ public class database extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_1);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_2);
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_3);
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_table_4);
     }
 
     //table 1
@@ -575,4 +586,79 @@ public class database extends SQLiteOpenHelper {
 
         return pos;
     }
+
+    //table 4
+    public int IDMAKER_TABLE_4(){
+        int uit = -1;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_4, null
+        );
+        if (cursor.getCount() == 0) {
+            uit = 0;
+        } else {
+            Cursor cursor1 =
+                    sqLiteDatabase.rawQuery("select max(" + Table_4_col_0 + " ) from " + DATABASE_table_4 + "", null);
+            StringBuffer stringBuffer = new StringBuffer();
+            if (cursor1.moveToFirst()) {
+                stringBuffer.append(cursor1.getString(0));
+                uit = Integer.parseInt(stringBuffer.toString()) + 1;
+            }
+        }
+        return uit;
+    }
+    public void addToTabel4(String s1,int i1) {
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put(Table_4_col_0, IDMAKER_TABLE_2());
+        contentValues.put(Table_4_col_1, "datum");
+        contentValues.put(Table_4_col_2, s1);
+        contentValues.put(Table_4_col_3, i1);
+
+        sqLiteDatabase.insert(DATABASE_table_4, null, contentValues);
+    }
+    public int length_table_4(){
+        int uit = 0;
+
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery(
+                "select * from " + DATABASE_table_4, null
+        );
+
+        uit = cursor.getCount();
+        return uit;
+    }
+    public String lastStatus_table_4(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_4_col_2 + " from " + DATABASE_table_4 + "", null);
+
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
+            }
+        }
+        return uit;
+    }
+    public String last_c_table_4(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        Cursor cursor =
+                sqLiteDatabase.rawQuery("select " + Table_4_col_3 + " from " + DATABASE_table_4 + "", null);
+
+        String uit = "";
+        for (int i = 0; i <= cursor.getCount(); i++) {
+            if (cursor.moveToPosition(i)) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(cursor.getString(0));
+                uit = stringBuffer.toString();
+            }
+        }
+        return uit;
+    }
+
 }
