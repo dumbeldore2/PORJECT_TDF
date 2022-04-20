@@ -65,8 +65,8 @@ public class database extends SQLiteOpenHelper {
                 "  TEXT default 'def'," + Table_3_col_4 + " TEXT default 'def'," + Table_3_col_5 + " TEXT default 'def'," + Table_3_col_6 + " TEXT default 'def'," + Table_3_col_7 + " TEXT default 'def')");
 
         db.execSQL("create table " + DATABASE_table_4 + "(" + Table_4_col_0 + " INTEGER DEFAULT " +
-                "0 primary key ," + Table_4_col_1 + "TEXT default 'def' ," + Table_4_col_2 +
-                "TEXT default 'def' , "+ Table_4_col_3 +" INTEGER )");
+                "0 primary key ," + Table_4_col_1 + " TEXT default 'def' ," + Table_4_col_2 +
+                " TEXT default 'def' , "+ Table_4_col_3 +" INTEGER )");
     }
 
     @Override
@@ -612,7 +612,7 @@ public class database extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put(Table_4_col_0, IDMAKER_TABLE_2());
+        contentValues.put(Table_4_col_0, IDMAKER_TABLE_4());
         contentValues.put(Table_4_col_1, "datum");
         contentValues.put(Table_4_col_2, s1);
         contentValues.put(Table_4_col_3, i1);
@@ -645,17 +645,17 @@ public class database extends SQLiteOpenHelper {
         }
         return uit;
     }
-    public String last_c_table_4(){
+    public int getTable_4_col_3(){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         Cursor cursor =
                 sqLiteDatabase.rawQuery("select " + Table_4_col_3 + " from " + DATABASE_table_4 + "", null);
 
-        String uit = "";
+        int uit = -1;
         for (int i = 0; i <= cursor.getCount(); i++) {
             if (cursor.moveToPosition(i)) {
                 StringBuffer stringBuffer = new StringBuffer();
                 stringBuffer.append(cursor.getString(0));
-                uit = stringBuffer.toString();
+                uit = Integer.parseInt(stringBuffer.toString());
             }
         }
         return uit;

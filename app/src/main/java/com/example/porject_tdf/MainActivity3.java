@@ -91,7 +91,8 @@ public class MainActivity3 extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
 
-                    intent.putExtra("id",i);
+                    db.addToTabel4("open",i);
+                    System.out.println(db.length_table_4());
 
                     startActivity(intent);
                 }

@@ -70,7 +70,6 @@ public class MainActivity5 extends AppCompatActivity {
             }
         });
     }
-
     public void click_2(){
         text4.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
@@ -79,7 +78,6 @@ public class MainActivity5 extends AppCompatActivity {
             }
         });
     }
-
     public void click_3(){
         text3.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {

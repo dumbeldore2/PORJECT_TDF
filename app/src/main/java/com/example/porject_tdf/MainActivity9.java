@@ -15,10 +15,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity9 extends AppCompatActivity {
-    //inent stuff
-    Intent intent;
-    int idList;
-
     //database initen
     database db;
 
@@ -60,9 +56,6 @@ public class MainActivity9 extends AppCompatActivity {
         getWindow().setNavigationBarColor(getResources().getColor(R.color.c1));
         getWindow().setStatusBarColor(getResources().getColor(R.color.c1));
 
-        //intent stuff
-        intent = getIntent();
-        idList = intent.getIntExtra("id",-1);
         //System.out.println(idList);
 
         //database conecten
@@ -101,7 +94,6 @@ public class MainActivity9 extends AppCompatActivity {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
-                intent.putExtra("id",idList);
                 startActivity(intent);
 
             }
@@ -123,7 +115,7 @@ public class MainActivity9 extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if(get1bool()){
-                            db.addToT3C7(get1(),idList);
+                            db.addToT3C7(get1(),db.getTable_4_col_3());
                             syncdb();
                             mainActivity9_bar = new MainActivity9_bar(getApplicationContext(),a,b
                                     ,c,d,e);
@@ -180,13 +172,13 @@ public class MainActivity9 extends AppCompatActivity {
 
     public void syncdb(){
         if (db.t3s7().length != 0){
-            System.out.println(idList);
-            a = db.t3s7()[idList].split(",");
-            System.out.println(a.length);
-            b = db.bol(idList);
-            c = db.wit(idList);
-            d = db.groen(idList);
-            e = db.geel(idList);
+            //System.out.println(idList);
+            a = db.t3s7()[db.getTable_4_col_3()].split(",");
+            //System.out.println(a.length);
+            b = db.bol(db.getTable_4_col_3());
+            c = db.wit(db.getTable_4_col_3());
+            d = db.groen(db.getTable_4_col_3());
+            e = db.geel(db.getTable_4_col_3());
         }
     }
 }

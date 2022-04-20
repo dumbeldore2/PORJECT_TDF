@@ -16,10 +16,6 @@ public class MainActivity8 extends AppCompatActivity {
     //textviews initen
     TextView text1;
 
-    //inent stuff
-    Intent intent;
-    int idList;
-
     //databse initen
     database db;
 
@@ -45,10 +41,6 @@ public class MainActivity8 extends AppCompatActivity {
         );
         getWindow().setNavigationBarColor(getResources().getColor(R.color.c1));
         getWindow().setStatusBarColor(getResources().getColor(R.color.c1));
-
-        //intent stuff
-        intent = getIntent();
-        idList = intent.getIntExtra("id",-1);
 
         //text connecten
         text1 = findViewById(R.id.text_1);
@@ -90,17 +82,14 @@ public class MainActivity8 extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
-                        db.addToTabel4("open",position);
                         startActivity(intent);
                         break;
                     case 1:
                         intent = new Intent(getApplicationContext(),MainActivity10.class);
-                        intent.putExtra("id",idList);
                         startActivity(intent);
                         break;
                     case 2:
                         intent = new Intent(getApplicationContext(),MainActivity2.class);
-                        intent.putExtra("id",idList);
                         startActivity(intent);
                         break;
                 }
