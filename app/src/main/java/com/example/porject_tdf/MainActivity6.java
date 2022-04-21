@@ -13,13 +13,13 @@ import android.widget.ImageView;
 public class MainActivity6 extends AppCompatActivity {
 
     //imageviews initen
-    ImageView image1,image2;
+    ImageView image1, image2;
 
     //databse initen
     database db;
 
     //constraints initen
-    ConstraintLayout constraintLayout1,constraintLayout2;
+    ConstraintLayout constraintLayout1, constraintLayout2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,45 +50,45 @@ public class MainActivity6 extends AppCompatActivity {
         logInListner();
     }
 
-    public void click_1(){
+    public void click_1() {
         image1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity5.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity5.class);
                 startActivity(intent);
             }
         });
 
         image1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override public boolean onLongClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity4.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity4.class);
                 startActivity(intent);
                 return true;
             }
         });
     }
-    public void click_2(){
+    public void click_2() {
         constraintLayout1.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intent);
             }
         });
     }
-    public void click_3(){
+    public void click_3() {
         constraintLayout2.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                 startActivity(intent);
             }
         });
     }
 
-    public void logInListner(){
+    public void logInListner() {
         /*
         System.out.println(db.lastStatus());
          */
 
-        if (db.lastStatus().equals("loged in")){
+        if (db.lastStatus().equals("loged in")) {
             image2.setImageResource(R.drawable.ic_baseline_check_circle_24);
         } else {
             image2.setImageResource(R.drawable.ic_baseline_clear_24);
