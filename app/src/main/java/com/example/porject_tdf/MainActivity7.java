@@ -96,7 +96,7 @@ public class MainActivity7 extends AppCompatActivity {
                     db.addToTabel3(get1(), get2db());
                     db.addToTabel4("created",db.length_table_2()-1);
 
-                    Intent intent = new Intent(getApplicationContext(), MainActivity6.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                     startActivity(intent);
 
                 } else {
