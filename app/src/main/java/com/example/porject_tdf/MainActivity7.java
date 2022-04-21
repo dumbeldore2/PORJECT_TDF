@@ -87,14 +87,16 @@ public class MainActivity7 extends AppCompatActivity {
             }
         });
     }
+
     public void click_2() {
+
         text7.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
                 if (get1bool() && strings.size() >= 2) {
 
                     db.addToTabel3(get1(), get2db());
-                    db.addToTabel4("created",db.length_table_2()-1);
+                    db.addToTabel4("created", db.length_table_2() - 1);
 
                     Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
                     startActivity(intent);
