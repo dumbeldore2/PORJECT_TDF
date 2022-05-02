@@ -35,6 +35,7 @@ public class MainActivity10 extends AppCompatActivity {
 
         //functions
         click_1();
+        click_2();
     }
 
 
@@ -43,6 +44,16 @@ public class MainActivity10 extends AppCompatActivity {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity8.class);
+                startActivity(intent);
+
+            }
+        });
+    }
+    public void click_2() {
+        text3.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity11.class);
                 startActivity(intent);
 
             }

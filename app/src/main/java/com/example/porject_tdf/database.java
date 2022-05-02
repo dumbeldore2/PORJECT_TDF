@@ -9,6 +9,8 @@ import android.os.CpuUsageInfo;
 
 import androidx.annotation.Nullable;
 
+import java.util.Calendar;
+
 public class database extends SQLiteOpenHelper {
     //db naam
     public static String DATABASE_NAME = "database_project_TDF.db";
@@ -613,7 +615,7 @@ public class database extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(Table_4_col_0, IDMAKER_TABLE_4());
-        contentValues.put(Table_4_col_1, "datum");
+        contentValues.put(Table_4_col_1, datum_maker());
         contentValues.put(Table_4_col_2, s1);
         contentValues.put(Table_4_col_3, i1);
 
@@ -658,6 +660,12 @@ public class database extends SQLiteOpenHelper {
                 uit = Integer.parseInt(stringBuffer.toString());
             }
         }
+        return uit;
+    }
+    public String datum_maker(){
+        String uit = "";
+        uit += Calendar.getInstance().getTime().toString();
+        System.out.println(uit);
         return uit;
     }
 
