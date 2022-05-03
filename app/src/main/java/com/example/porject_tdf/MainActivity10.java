@@ -54,6 +54,7 @@ public class MainActivity10 extends AppCompatActivity {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity11.class);
+                db.addToTabel4("create new etape",db.getTable_4_col_3());
                 startActivity(intent);
 
             }

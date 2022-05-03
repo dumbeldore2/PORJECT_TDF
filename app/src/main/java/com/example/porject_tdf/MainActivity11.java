@@ -41,6 +41,7 @@ public class MainActivity11 extends AppCompatActivity {
             @Override public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                db.addToTabel4("chosing winners",db.getTable_4_col_3());
                 startActivity(intent);
 
             }

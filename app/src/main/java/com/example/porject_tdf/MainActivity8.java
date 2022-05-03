@@ -82,14 +82,17 @@ public class MainActivity8 extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent(getApplicationContext(),MainActivity9.class);
+                        db.addToTabel4("open renners",db.getTable_4_col_3());
                         startActivity(intent);
                         break;
                     case 1:
                         intent = new Intent(getApplicationContext(),MainActivity10.class);
+                        db.addToTabel4("open etapes",db.getTable_4_col_3());
                         startActivity(intent);
                         break;
                     case 2:
                         intent = new Intent(getApplicationContext(),MainActivity2.class);
+                        db.addToTabel4("open truien",db.getTable_4_col_3());
                         startActivity(intent);
                         break;
                 }
