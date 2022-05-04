@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PORJECT_TDF">
         <activity
+            android:name=".MainActivity13"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity12_bar"
             android:exported="false" />
         <activity
