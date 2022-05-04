@@ -49,9 +49,11 @@
                     android:orientation="horizontal"
 
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
                     <ImageView
                         android:id="@+id/image_1"
+                        android:padding="5dp"
 
                         android:layout_width="200dp"
                         android:layout_height="200dp"
@@ -61,6 +63,7 @@
                         android:src="@drawable/geel"/>
                     <ImageView
                         android:id="@+id/image_2"
+                        android:padding="5dp"
 
                         android:layout_width="200dp"
                         android:layout_height="200dp"
@@ -79,9 +82,11 @@
                     android:orientation="horizontal"
 
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
                     <ImageView
                         android:id="@+id/image_3"
+                        android:padding="5dp"
 
                         android:layout_width="200dp"
                         android:layout_height="200dp"
@@ -91,6 +96,7 @@
                         android:src="@drawable/bol"/>
                     <ImageView
                         android:id="@+id/image_4"
+                        android:padding="5dp"
 
                         android:layout_width="200dp"
                         android:layout_height="200dp"
@@ -101,6 +107,27 @@
 
                 </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/linear4"
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:orientation="horizontal"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:padding="5dp"
+                    android:id="@+id/image_5"
+
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/background_listview_item_ma_3"
+
+                    android:src="@drawable/ic_trophy_svgrepo_com"/>
+            </LinearLayout>
+
                 <ListView
                     android:id="@+id/list_view_1"
 
@@ -109,6 +136,7 @@
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_6"

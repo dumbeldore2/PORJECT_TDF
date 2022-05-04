@@ -40,7 +40,7 @@ public class MainActivity11 extends AppCompatActivity {
         text3.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity12.class);
                 db.addToTabel4("chosing winners",db.getTable_4_col_3());
                 startActivity(intent);
 
